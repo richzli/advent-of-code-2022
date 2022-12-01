@@ -1,2 +1,4 @@
 session
 .vscode/*
+*/*.in
+*/*.md
