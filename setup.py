@@ -1,6 +1,6 @@
 import sys, os
 import subprocess
-import markdownify
+from markdownify import markdownify
 from bs4 import BeautifulSoup
 
 template = """#include "../template.hpp"
@@ -18,7 +18,7 @@ cookie = open("session").read()
 os.makedirs(folder, exist_ok=True)
 os.system(f"curl --cookie \"session={cookie}\" https://adventofcode.com/2022/day/{day}/input > {folder}/{day:02}.in")
 open(f"{folder}/{day:02}.md", "w").write(
-    markdownify.markdownify(
+    markdownify(
         str(BeautifulSoup(
             str(subprocess.check_output(
                 ["curl", "--cookie", f"\"session={cookie}\"", f"https://adventofcode.com/2022/day/{day}"]
