@@ -20,16 +20,12 @@ typedef map<ll, ll> mll;
 int dx4[4] = {1, 0, -1, 0}, dy4[4] = {0, 1, 0, -1};
 int dx8[8] = {1, 1, 1, 0, -1, -1, -1, 0}, dy8[8] = {1, 0, -1, -1, -1, 0, 1, 1};
 
-/* read comma-separated line of ints */
-vi rcl() {
-    vi nums;
-    string s; cin >> s;
-    size_t pos = 0, oldpos = 0;
-    while ((pos = s.find(",", oldpos)) != string::npos) {
-        int num = stoi(s.substr(oldpos, pos - oldpos));
-        oldpos = pos + 1;
-        nums.pb(num);
+vector<string> split(string s, string delim) {
+    int pos = 0;
+    vector<string> ret;
+    while ((pos = s.find(delim)) != std::string::npos) {
+        ret.pb(s.substr(0, pos));
+        s.erase(0, pos + delim.length());
     }
-    nums.pb(stoi(s.substr(oldpos, s.size()-oldpos)));
-    return nums;
+    return ret;
 }

@@ -27,4 +27,3 @@ open(f"{folder}/{day:02}.md", "w").write(
     )
 )
 open(f"{folder}/{day:02}-1.cpp", "w").write(template)
-open(f"{folder}/{day:02}-2.cpp", "w").write(template)
