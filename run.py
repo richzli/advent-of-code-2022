@@ -2,7 +2,6 @@ import sys, os
 
 day, part = map(int, sys.argv[1:3])
 overwrite = True
-print(sys.argv)
 if len(sys.argv) > 3:
     overwrite = False
 fifth = (day-1) // 5
