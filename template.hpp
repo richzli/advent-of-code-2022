@@ -21,9 +21,9 @@ int dx4[4] = {1, 0, -1, 0}, dy4[4] = {0, 1, 0, -1};
 int dx8[8] = {1, 1, 1, 0, -1, -1, -1, 0}, dy8[8] = {1, 0, -1, -1, -1, 0, 1, 1};
 
 vector<string> split(string s, string delim) {
-    int pos = 0;
+    size_t pos = 0;
     vector<string> ret;
-    while ((pos = s.find(delim)) != std::string::npos) {
+    while ((pos = s.find(delim)) != string::npos) {
         ret.pb(s.substr(0, pos));
         s.erase(0, pos + delim.length());
     }
