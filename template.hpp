@@ -27,5 +27,10 @@ vector<string> split(string s, string delim) {
         ret.pb(s.substr(0, pos));
         s.erase(0, pos + delim.length());
     }
+    ret.pb(s);
     return ret;
+}
+
+int sgn(int x) {
+    return (x == 0) ? 0 : (x/abs(x));
 }
