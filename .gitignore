@@ -2,3 +2,4 @@ session
 .vscode/*
 */*.in
 */*.md
+*.tmp
